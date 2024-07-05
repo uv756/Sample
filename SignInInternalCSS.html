@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign Up Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif; /* Ensures a clean, modern font is used */
+        background: #f4f4f4; /* Light grey background */
+        padding: 20px; /* Adds some padding around the form */
+    }
+    .form-container {
+        background: white; /* White background for the form */
+        width: 50%; /* Adjust width to your preference */
+        margin: 0 auto; /* Centers the form on the page */
+        padding: 20px; /* Adds padding inside the form */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow around the form */
+    }
+    input[type="text"], input[type="date"], select, textarea, input[type="password"] {
+        width: 30%; /* Makes input take full width of the form container */
+        padding: 8px; /* Adds padding inside the input */
+        margin-top: 8px; /* Adds margin on top of the input */
+        margin-bottom: 16px; /* Adds space below the input */
+        border: 1px solid #ccc; /* Light grey border for the inputs */
+        border-radius: 4px; /* Slightly rounded borders for the inputs */
+    }
+    input[type="submit"] {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Padding inside the button */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        width: 100%; /* Full width */
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Darker shade of green for hover effect */
+    }
+</style>
+</head>
+<body>
+<div class="form-container">
+    <form action="/action_page.php">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Your name...">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Your last name...">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="United States">United States</option>
+            <option value="India">India</option>
+            <option value="Africa">Africa</option>
+            <option value="Dubai">Dubai</option>
+        </select>
+        <h5>Gender:</h5>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label><br>
+        <h5>Date of Birth:</h5>
+        <input type="date" id="dob" name="date" required>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" placeholder="Your phone number...">
+        <h5>Current Address:</h5>
+        <textarea id="address" name="address" placeholder="Your current address..."></textarea>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Your email...">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Your password...">
+        <label for="retypePassword">Re-type Password:</label>
+        <input type="password" id="retypePassword" name="retypePassword" placeholder="Re-type your password...">
+        <input type="submit" value="Register">
+    </form>
+</div>
+</body>
+</html>

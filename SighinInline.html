@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px;">
+    <div style="background: white; width: 50%; margin: 0 auto; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <form action="/action_page.php" style="width: 100%;">
+            <label for="fname" style="display: block; margin-top: 8px;">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Your name..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="lname" style="display: block; margin-top: 8px;">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Your last name..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="country" style="display: block; margin-top: 8px;">Country:</label>
+            <select id="country" name="country" style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                <option value="United States">United States</option>
+                <option value="India">India</option>
+                <option value="Africa">Africa</option>
+                <option value="Dubai">Dubai</option>
+            </select>
+
+            <h5 style="margin-top: 16px;">Gender:</h5>
+            <label style="margin-right: 10px;"><input type="radio" name="gender" value="male" style="margin-top: 8px;"> Male</label>
+            <label><input type="radio" name="gender" value="female" style="margin-top: 8px;"> Female</label><br>
+
+            <h5 style="margin-top: 16px;">Date of Birth:</h5>
+            <input type="date" id="dob" name="date" required style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="phone" style="display: block; margin-top: 16px;">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <h5 style="margin-top: 16px;">Current Address:</h5>
+            <textarea id="address" name="address" placeholder="Your current address..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+            <label for="email" style="display: block; margin-top: 16px;">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Your email..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="password" style="display: block; margin-top: 16px;">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your password..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="retypePassword" style="display: block; margin-top: 16px;">Re-type Password:</label>
+            <input type="password" id="retypePassword" name="retypePassword" placeholder="Re-type your password..." style="width: 100%; padding: 8px; margin-top: 8px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <input type="submit" value="Register" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 16px;">
+        </form>
+    </div>
+</body>
+</html>

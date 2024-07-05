@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" type="text/css" href="TableExternalcss.css"> 
+</head>
+<body>
+    <h2>Information</h2>
+    <table border="1"> 
+      <thead>
+        <tr >
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Country</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Phone</th>
+          <th>Current Address</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="userInfo">
+       
+      </tbody>
+    </table>
+    console.log(a)
+
+    <script>
+        window.onload = function() {
+            const storedData = localStorage.getItem('formData');
+            const data = JSON.parse(storedData);
+
+        
+            if (data) {
+                const row = `<tr>
+                    <td>${data.fname}</td>
+                    <td>${data.lname}</td>
+                    <td>${data.country}</td>
+                    <td>${data.gender}</td>
+                    <td>${data.date}</td>
+                    <td>${data.phone}</td>
+                    <td>${data.address}</td>
+                    <td>${data.email}</td>
+                </tr>`;
+                document.getElementById('userInfo').innerHTML = row;
+            }
+        };
+    </script>
+</body>
+</html>
+var a = 5;

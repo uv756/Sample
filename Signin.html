@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/submit-your-form" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="United States">United States</option>
+            <option value="India">India</option>
+            <option value="Africa">Africa</option>
+            <option value="Dubai">Dubai</option>
+        </select>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="date">
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="address">Current Address:</label>
+        <textarea id="address" name="comments"></textarea>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="retypePassword">Re-type Password:</label>
+        <input type="password" id="retypePassword" name="retypePassword">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

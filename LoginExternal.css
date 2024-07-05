@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif; /* Ensures a clean, modern font is used */
+    background: #f4f4f4; /* Light grey background */
+    padding: 20px; /* Adds some padding around the form */
+}
+.form-container {
+    background: white; /* White background for the form */
+    width: 50%; /* Adjust width to your preference */
+    margin: 0 auto; /* Centers the form on the page */
+    padding: 20px; /* Adds padding inside the form */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow around the form */
+}
+input[type="text"], input[type="date"], select, textarea, input[type="password"] {
+    width: 100%; /* Makes input take full width of the form container */
+    padding: 8px; /* Adds padding inside the input */
+    margin-top: 8px; /* Adds margin on top of the input */
+    margin-bottom: 16px; /* Adds space below the input */
+    border: 1px solid #ccc; /* Light grey border for the inputs */
+    border-radius: 4px; /* Slightly rounded borders for the inputs */
+}
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width */
+}
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker shade of green for hover effect */
+}

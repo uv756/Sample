@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Table</title>
+<link rel="stylesheet" type="text/css" href="TableExternalcss.css"> 
+<script>
+  async function getData()
+  {
+   
+  const url = "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    const json = await response.json();
+    console.log(json);
+    json.data.forEach((item) => {
+      document.getElementById("t-body").innerHTML = document.getElementById("t-body").innerHTML  + "<tr><td>" + item["ID Nation"] +"</td> <td>" + item.Nation + "</td><td>" + item["ID Year"]+ "</td><td>" + item.Year+ "</td><td>" + item.Population+ "</td><td>" + item["Slug Nation"]+ "</td></tr>"
+    });
+
+  } catch (error) {
+    console.error(error);
+  }
+  document.getElementById("head").innerHTML = "<tr> <th> ID Nation </th> <th> Nation </th> <th> ID Year</th> <th>Year</th><th>Population</th><th>Slug Nation</th></tr>"
+}
+
+async function getinfo(){
+}
+
+  </script>
+</head>
+<body>
+<h2 id="info">Information</h2>
+<table border="1"> 
+  <thead id="head">
+    <tr> <th> ID Nation </th> <th> Nation </th> <th> ID Year</th> <th>Year</th><th>Population</th><th>Slug Nation</th></tr>
+  </thead>
+  <tbody id="t-body" >
+  </tbody>
+</table> <br>
+<button type ="submit", onclick="getinfo()">Submit</button>
+<button type ="fetch", onclick="getData()">Fetch</button>
+</body>
+</html>

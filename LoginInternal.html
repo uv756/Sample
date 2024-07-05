@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login In</title>
+<style>
+    body {
+        font-family: Arial, sans-serif; 
+        background: #f4f4f4; 
+        padding: 20px; 
+    }
+    .form-container {
+        background: white; 
+        width: 30%; 
+        margin: 0 auto; 
+        padding: 20px; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="date"], select, textarea, input[type="password"] {
+        width: 50%; 
+        padding: 8px; 
+        margin-top: 8px; 
+        margin-bottom: 16px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+    }
+    input[type="submit"] {
+        background-color: #4CAF50; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        width: 50%;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; 
+    }
+</style>
+</head>
+
+<body>
+    <h2>Login</h2>
+    <form action="/submit-your-login-form" style="width: 100%;">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required style="width: 100%; margin-top: 8px;"> <br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required style="width: 100%; margin-top: 8px;"><br>
+      
+      <input type="submit" value="Login" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; width: 100%; margin-top: 16px;">
+  </div>
+</body>
+
+</html>

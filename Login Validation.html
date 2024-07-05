@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;  // Ensure variable names are consistent in case
+  
+      if (username === "") {
+        alert("Enter the username");
+        return false;  // Stop the form submission if username is empty
+      }
+  
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;  // Stop the form submission if password is too short
+      }
+
+  
+      return true;  // Allow the form submission if all checks pass
+    }
+  </script>
+</head>
+<body>
+    <form action="/submit-your-login-form"onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required> <br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required style="width: 100%; margin-top: 8px;"><br>
+      
+      <input type="submit" value="Login" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; width: 100%; margin-top: 16px;">
+  </div>
+</body>
+</body>
+</html>

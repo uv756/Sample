@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validateForm() {
+      var fname = document.getElementById('fname').value;
+      var lname = document.getElementById('lname').value;
+      var phone = document.getElementById('phone').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var retypePassword = document.getElementById('retypePassword').value;
+
+      if (!fname || !lname) {
+        alert("First name and last name are required.");
+        return false;
+      }
+
+      if (!phone.match(/^\d{10}$/)) { // Validates phone number as a 10-digit number
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+      }
+
+      if (!email.includes('@')) { // Simple validation for email
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+
+      if (password !== retypePassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      return true; // If all conditions are met, allow submission
+    }
+  </script>
+</head>
+<body>
+  <form action="/action_page.php" onsubmit="return validateForm()">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label for="country">Country</label><br>
+    <select id="country" name="country">
+        <option value="United States">United States</option>
+        <option value="India">India</option>
+        <option value="Africa">Africa</option>
+        <option value="Dubai">Dubai</option>
+    </select><br>
+
+    <h5>Gender:</h5>
+    <label><input type="radio" name="gender" value="male">Male</label>
+    <label><input type="radio" name="gender" value="female">Female</label><br>
+
+    <h5>Date of Birth</h5>
+    <input type="date" id="dob" name="date" required><br>
+
+    <label for="phone" id="phone-label">Phone:</label><br>
+    <input type="text" id="phone" name="Phone"><br>
+
+    <h5>Current Address</h5>
+    <textarea id="address" name="comments"></textarea><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+
+    <label for="retypePassword">Re-type Password:</label><br>
+    <input type="password" id="retypePassword" name="retypePassword"><br>
+
+    <button type="submit">Register</button>
+  </form>
+</body>
+</html>
